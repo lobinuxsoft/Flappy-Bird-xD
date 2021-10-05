@@ -1,0 +1,5 @@
+﻿  main.cpp
+F:\Repositorios\Flappy-Bird-xD\src\main.cpp(3,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
+  LINK : /LTCG specified but no code generation required; remove /LTCG from the link command line to improve linker performance
+  FlappyBirdXD.vcxproj -> F:\Repositorios\Flappy-Bird-xD\Release\FlappyBirdXD.exe
+  0 archivo(s) copiado(s)

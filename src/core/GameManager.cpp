@@ -7,6 +7,7 @@
 
 #include "utils/GameEnums.h"
 #include "screens/MainMenuScreen.h";
+#include "screens/CreditScreen.h"
 
 #pragma region GLOBAL VARIABLES
 
@@ -24,6 +25,7 @@ static GameState gameState = GameState::MainMenu;
 #pragma region SCREENS
 
 MainMenuScreen* mainMenuScreen;
+CreditScreen* creditScreen;
 
 #pragma endregion
 
@@ -34,6 +36,7 @@ static void InitGame()
     InitAudioDevice();
 
     mainMenuScreen = new MainMenuScreen();
+    creditScreen = new CreditScreen();
 
     //HideCursor();
 }
@@ -51,8 +54,7 @@ static void UpdateGame()
     case GameState::Tutorial:
         break;
     case GameState::Credits:
-        break;
-    case GameState::Quit:
+        creditScreen->update(gameState);
         break;
     }
 }
@@ -76,8 +78,7 @@ static void DrawGame()
     case GameState::Tutorial:
         break;
     case GameState::Credits:
-        break;
-    case GameState::Quit:
+        creditScreen->draw();
         break;
     }
 
@@ -95,6 +96,7 @@ static void UpdateDrawGameFrame()
 static void UnloadGame()
 {
     delete mainMenuScreen;
+    delete creditScreen;
 
     CloseAudioDevice();
 }

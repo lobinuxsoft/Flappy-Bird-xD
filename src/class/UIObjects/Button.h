@@ -1,11 +1,15 @@
 #pragma once
-#include "Class/Entity.h"
+
 #include <string>
+
+#include "Class/Entity.h"
+
+using namespace std;
 
 class Button : public Entity
 {
 private:
-	std::string text = "";
+	string text = "";
 	Sound clickSfx;
 	int fontSize = 10;
 	Color textColor = WHITE;
@@ -28,7 +32,7 @@ private:
 public:
 	Button(
 		Vector2 position,
-		std::string text,
+		string text,
 		const char clickSfxUrl[],
 		int fontSize = 20,
 		float hMargin = 10,
@@ -42,7 +46,7 @@ public:
 	);
 
 	void setPivot(Vector2 pivot);
-	void setText(std::string text, Color color = WHITE);
+	void setText(string text, Color color = WHITE);
 	void setNormalColor(Color color);
 	void setPressColor(Color color);
 	bool isClick();

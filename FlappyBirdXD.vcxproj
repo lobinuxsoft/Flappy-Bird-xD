@@ -94,6 +94,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\core\screens\CreditScreen.cpp" />
     <ClCompile Include="src\core\screens\MainMenuScreen.cpp" />
     <ClCompile Include="src\class\Entity.cpp" />
     <ClCompile Include="src\class\UIObjects\Button.cpp" />
@@ -101,8 +102,10 @@
     <ClCompile Include="src\core\GameManager.cpp" />
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="src\utils\Vector2Utils.cpp" />
+    <ClCompile Include="src\class\UIObjects\TextButton.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\core\screens\CreditScreen.h" />
     <ClInclude Include="src\core\screens\MainMenuScreen.h" />
     <ClInclude Include="src\class\Entity.h" />
     <ClInclude Include="src\class\UIObjects\Button.h" />
@@ -110,6 +113,7 @@
     <ClInclude Include="src\core\GameManager.h" />
     <ClInclude Include="src\utils\GameEnums.h" />
     <ClInclude Include="src\utils\Vector2Utils.h" />
+    <ClInclude Include="src\class\UIObjects\TextButton.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -5,20 +5,21 @@
 
 #include "utils/GameEnums.h"
 #include "class/UIObjects/Button.h"
+#include "class/UIObjects/TextButton.h"
 
 using namespace std;
 
-class MainMenuScreen
+class CreditScreen
 {
 private:
 	string clickSfxUrl = "";
-	Button* gameplayButton;
-	Button* creditsButton;
-	Button* quitButton;
+	string myLinkedinUrl = "https://www.linkedin.com/in/lobinux/";
+	TextButton* myLinkedin;
+	Button* returnButton;
 
 public:
-	MainMenuScreen();
-	~MainMenuScreen();
+	CreditScreen();
+	~CreditScreen();
 	void update(GameState& gameState);
 	void draw();
 };

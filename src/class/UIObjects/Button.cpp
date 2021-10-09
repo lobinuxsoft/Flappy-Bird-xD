@@ -26,9 +26,20 @@ void Button::setPivot(Vector2 pivot)
     this->pivot = pivot;
 }
 
-void Button::setText(std::string text)
+void Button::setText(std::string text, Color color)
 {
     this->text = text;
+    this->textColor = color;
+}
+
+void Button::setNormalColor(Color color)
+{
+    this->normalColor = color;
+}
+
+void Button::setPressColor(Color color)
+{
+    this->pressColor = color;
 }
 
 bool Button::isClick()

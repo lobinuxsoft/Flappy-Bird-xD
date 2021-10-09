@@ -30,19 +30,21 @@ public:
 		Vector2 position,
 		std::string text,
 		const char clickSfxUrl[],
-		int fontSize = 10,
-		float hMargin = 5,
-		float vMargin = 5,
-		float roundness = 0.5f,
+		int fontSize = 20,
+		float hMargin = 10,
+		float vMargin = 10,
+		float roundness = 1,
 		int segment = 16,
-		int tickness = 1,
+		int tickness = 5,
 		Color textColor = WHITE,
 		Color normalColor = BLUE,
 		Color pressColor = DARKBLUE
 	);
 
 	void setPivot(Vector2 pivot);
-	void setText(std::string text);
+	void setText(std::string text, Color color = WHITE);
+	void setNormalColor(Color color);
+	void setPressColor(Color color);
 	bool isClick();
 	void update();
 	void draw() override;

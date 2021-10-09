@@ -13,6 +13,7 @@ class MainMenuScreen
 private:
 	string clickSfxUrl = "";
 	Button* gameplayButton;
+	Button* creditsButton;
 
 public:
 	MainMenuScreen();

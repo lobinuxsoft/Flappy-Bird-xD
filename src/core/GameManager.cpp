@@ -1,8 +1,12 @@
 #include "GameManager.h"
-#include "utils/GameEnums.h"
-#include "raylib.h"
+
 #include <string>
 #include <vector>
+
+#include "raylib.h"
+
+#include "utils/GameEnums.h"
+#include "screens/MainMenuScreen.h";
 
 #pragma region GLOBAL VARIABLES
 
@@ -17,17 +21,21 @@ static GameState gameState = GameState::MainMenu;
 
 #pragma endregion
 
+#pragma region SCREENS
+
+MainMenuScreen* mainMenuScreen;
+
+#pragma endregion
+
+
 // Initialize game variables
 static void InitGame()
 {
-    if (IsAudioDeviceReady())
-    {
-        InitAudioDevice();
+    InitAudioDevice();
 
-        // Inicializar audios
-    }
+    mainMenuScreen = new MainMenuScreen();
 
-    HideCursor();
+    //HideCursor();
 }
 
 // Update game (one frame)
@@ -36,6 +44,7 @@ static void UpdateGame()
     switch (gameState)
     {
     case GameState::MainMenu:
+        mainMenuScreen->update(gameState);
         break;
     case GameState::Gameplay:
         break;
@@ -57,6 +66,21 @@ static void DrawGame()
 
     // Hacer toda la la logica del juego
 
+    switch (gameState)
+    {
+    case GameState::MainMenu:
+        mainMenuScreen->draw();
+        break;
+    case GameState::Gameplay:
+        break;
+    case GameState::Tutorial:
+        break;
+    case GameState::Credits:
+        break;
+    case GameState::Quit:
+        break;
+    }
+
     EndDrawing();
 }
 
@@ -70,7 +94,8 @@ static void UpdateDrawGameFrame()
 // Unload game variables
 static void UnloadGame()
 {
-    
+    delete mainMenuScreen;
+
     CloseAudioDevice();
 }
 

@@ -1,4 +1,0 @@
-﻿  main.cpp
-F:\Repositorios\Flappy-Bird-xD\src\main.cpp(3,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-  FlappyBirdXD.vcxproj -> F:\Repositorios\Flappy-Bird-xD\Debug\FlappyBirdXD.exe
-  0 archivo(s) copiado(s)

@@ -35,5 +35,5 @@ void MainMenuScreen::draw()
 	gameplayButton->draw();
 	creditsButton->draw();
 	quitButton->draw();
-	DrawText("version 0.1", GetScreenWidth() - MeasureText("version 0.1", 20) - 10, GetScreenHeight() - 30, 20, WHITE);
+	DrawText(gameVersion, GetScreenWidth() - MeasureText(gameVersion, 20) - 10, GetScreenHeight() - 30, 20, WHITE);
 }

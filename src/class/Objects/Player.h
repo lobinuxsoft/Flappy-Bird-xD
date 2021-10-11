@@ -23,6 +23,7 @@ private:
 public:
 	Player(Vector2 position, const char spriteUrl[], const char jumpSfxUrl[]);
 	~Player() override;
+	void setPivot(Vector2 pivot);
 	float getRadius();
 	void setIsAlive(bool isAlive);
 	bool getIsAlive();

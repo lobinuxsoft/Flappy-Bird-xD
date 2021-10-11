@@ -3,8 +3,9 @@
 
 #include "raylib.h"
 
-#include "utils/GameEnums.h"
+#include "utils/GameUtils.h"
 #include "class/Objects/Player.h"
+#include "class/Objects/Obstacle.h"
 
 using namespace std;
 
@@ -14,6 +15,10 @@ private:
 	string playerSpriteUrl = "";
 	string jumpSfxUrl = "";
 	Player* player;
+
+	string obstacleSpriteUrl = "";
+	string collisionSfxUrl = "";
+	Obstacle* obstacle;
 
 public:
 	GameplayScreen();

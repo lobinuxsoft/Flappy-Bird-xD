@@ -4,13 +4,11 @@ void Player::screenLimitsLogic()
 {
 	if (position.y > (GetScreenHeight() - radius))
 	{
-		isAlive = false;
-		position = startPosition;
+		setIsAlive(false);
 	}
 	else if (position.y < radius) 
 	{
-		isAlive = false;
-		position = startPosition;
+		setIsAlive(false);
 	}
 }
 
@@ -35,6 +33,11 @@ Player::~Player()
 	UnloadSound(jumpSfx);
 }
 
+void Player::setPivot(Vector2 pivot)
+{
+	this->pivot = pivot;
+}
+
 float Player::getRadius()
 {
 	return radius;
@@ -42,6 +45,7 @@ float Player::getRadius()
 
 void Player::setIsAlive(bool isAlive)
 {
+	this->position = startPosition;
 	this->isAlive = isAlive;
 }
 

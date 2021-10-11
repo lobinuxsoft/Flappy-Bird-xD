@@ -48,6 +48,9 @@
     <ClCompile Include="src\class\Objects\Player.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="src\class\Objects\Obstacle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\utils\Vector2Utils.h">
@@ -68,7 +71,7 @@
     <ClInclude Include="src\core\screens\MainMenuScreen.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="src\utils\GameEnums.h">
+    <ClInclude Include="src\utils\GameUtils.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\core\screens\CreditScreen.h">
@@ -81,6 +84,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="src\class\Objects\Player.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="src\class\Objects\Obstacle.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

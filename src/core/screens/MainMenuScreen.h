@@ -3,7 +3,7 @@
 
 #include "raylib.h"
 
-#include "utils/GameEnums.h"
+#include "utils/GameUtils.h"
 #include "class/UIObjects/Button.h"
 
 using namespace std;

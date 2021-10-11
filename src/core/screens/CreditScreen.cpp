@@ -31,5 +31,7 @@ void CreditScreen::draw()
 	DrawText("Creditos", GetScreenWidth() * 0.5f - (MeasureText("Creditos", GetScreenHeight() * 0.125f) * 0.5f), 0, GetScreenHeight() * 0.125f, WHITE);
 	myLinkedin->draw();
 	returnButton->draw();
+
+	DrawText(gameVersion, GetScreenWidth() - MeasureText(gameVersion, 20) - 10, GetScreenHeight() - 30, 20, WHITE);
 }
 

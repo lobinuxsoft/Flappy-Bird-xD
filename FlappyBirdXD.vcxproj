@@ -94,6 +94,7 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\class\Objects\Obstacle.cpp" />
     <ClCompile Include="src\class\Objects\Player.cpp" />
     <ClCompile Include="src\core\screens\GameplayScreen.cpp" />
     <ClCompile Include="src\core\screens\CreditScreen.cpp" />
@@ -107,6 +108,7 @@
     <ClCompile Include="src\class\UIObjects\TextButton.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\class\Objects\Obstacle.h" />
     <ClInclude Include="src\class\Objects\Player.h" />
     <ClInclude Include="src\core\screens\GameplayScreen.h" />
     <ClInclude Include="src\core\screens\CreditScreen.h" />
@@ -115,7 +117,7 @@
     <ClInclude Include="src\class\UIObjects\Button.h" />
     <ClInclude Include="src\class\UIObjects\ProgressBar.h" />
     <ClInclude Include="src\core\GameManager.h" />
-    <ClInclude Include="src\utils\GameEnums.h" />
+    <ClInclude Include="src\utils\GameUtils.h" />
     <ClInclude Include="src\utils\Vector2Utils.h" />
     <ClInclude Include="src\class\UIObjects\TextButton.h" />
   </ItemGroup>

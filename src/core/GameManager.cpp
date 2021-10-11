@@ -5,7 +5,7 @@
 
 #include "raylib.h"
 
-#include "utils/GameEnums.h"
+#include "utils/GameUtils.h"
 #include "screens/MainMenuScreen.h";
 #include "screens/CreditScreen.h"
 #include "screens/GameplayScreen.h"

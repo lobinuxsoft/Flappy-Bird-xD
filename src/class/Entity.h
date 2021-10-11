@@ -8,6 +8,7 @@ protected:
 
 public:
 	Entity(Vector2 position);
+	virtual ~Entity();
 	void setPosition(Vector2 position);
 	Vector2 getPosition();
 	virtual void draw() = 0;

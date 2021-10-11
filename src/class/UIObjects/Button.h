@@ -45,6 +45,7 @@ public:
 		Color pressColor = DARKBLUE
 	);
 
+	~Button() override;
 	void setPivot(Vector2 pivot);
 	void setText(string text, Color color = WHITE);
 	void setNormalColor(Color color);

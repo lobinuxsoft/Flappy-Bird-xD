@@ -10,6 +10,8 @@ void TextButton::mouseCollision()
 TextButton::TextButton(Vector2 position, string text, int fontSize, string linkUrl, Color normalColor, Color hoverColor, Color pressColor)
     : Entity{ position }, text(text), fontSize(fontSize), linkUrl(linkUrl), normalColor(normalColor), hoverColor(hoverColor), pressColor(pressColor) { }
 
+TextButton::~TextButton() { }
+
 void TextButton::setPivot(Vector2 pivot)
 {
     this->pivot = pivot;

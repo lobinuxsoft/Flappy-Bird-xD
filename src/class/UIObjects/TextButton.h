@@ -25,6 +25,7 @@ private:
 
 public:
 	TextButton(Vector2 position, string text, int fontsize = 10, string linkUrl = "", Color normalColor = WHITE, Color hoverColor = BLUE, Color pressColor = DARKBLUE);
+	~TextButton() override;
 	void setPivot(Vector2 pivot);
 	void setText(string text);
 	bool isClick();

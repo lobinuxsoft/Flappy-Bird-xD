@@ -21,6 +21,11 @@ Button::Button(Vector2 position, std::string text, const char clickSfxUrl[], int
     normalColor(normalColor),
     pressColor(pressColor) { }
 
+Button::~Button()
+{
+    UnloadSound(clickSfx);
+}
+
 void Button::setPivot(Vector2 pivot)
 {
     this->pivot = pivot;

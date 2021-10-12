@@ -111,7 +111,7 @@ void Run()
 
     // Initialization (Note windowTitle is unused on Android)
     //---------------------------------------------------------
-    InitWindow(screenWidth, screenHeight, "Asteroid xD");
+    InitWindow(screenWidth, screenHeight, "Flappy Bird xD");
     gameIcon = LoadImage(gameIconUrl);
     SetWindowIcon(gameIcon);
 

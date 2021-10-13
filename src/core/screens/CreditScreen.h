@@ -15,6 +15,8 @@ private:
 	string clickSfxUrl = "";
 	string myLinkedinUrl = "https://www.linkedin.com/in/lobinux/";
 	TextButton* myLinkedin;
+	string parallaxUrl = "https://mobilegamegraphics.com/product/free-parallax-backgrounds/";
+	TextButton* parallaxLinkButton;
 	Button* returnButton;
 
 public:

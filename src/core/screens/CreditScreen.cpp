@@ -3,10 +3,10 @@
 CreditScreen::CreditScreen()
 {
 
-	myLinkedin = new TextButton({ GetScreenWidth() * 0.5f, GetScreenHeight() * 0.2f }, "Created by Matias Galarza", 30, myLinkedinUrl);
+	myLinkedin = new TextButton({ GetScreenWidth() * 0.5f, GetScreenHeight() * 0.2f }, "Created by Matias Galarza", 30, myLinkedinUrl, BLACK);
 	myLinkedin->setPivot({ 0.5f,0.5f });
 
-	parallaxLinkButton = new TextButton({ GetScreenWidth() * 0.5f, GetScreenHeight() * 0.25f }, "Parallax art created by mobilegamegraphics.com", 30, parallaxUrl);
+	parallaxLinkButton = new TextButton({ GetScreenWidth() * 0.5f, GetScreenHeight() * 0.25f }, "Parallax art created by mobilegamegraphics.com", 30, parallaxUrl, BLACK);
 	parallaxLinkButton->setPivot({ 0.5f,0.5f });
 
 	returnButton = new Button({ GetScreenWidth() * 0.5f, GetScreenHeight() - 50.0f }, "Volver", clickSfxUrl.c_str(), GetScreenHeight() * 0.05f, 20);
@@ -35,7 +35,7 @@ void CreditScreen::update(GameState& gameState)
 
 void CreditScreen::draw()
 {
-	DrawText("Creditos", GetScreenWidth() * 0.5f - (MeasureText("Creditos", GetScreenHeight() * 0.125f) * 0.5f), 0, GetScreenHeight() * 0.125f, WHITE);
+	DrawText("Creditos", GetScreenWidth() * 0.5f - (MeasureText("Creditos", GetScreenHeight() * 0.125f) * 0.5f), 0, GetScreenHeight() * 0.125f, BLACK);
 	myLinkedin->draw();
 	parallaxLinkButton->draw();
 	returnButton->draw();

@@ -16,6 +16,7 @@ class ParallaxBackground
 {
 private:
 	vector<Background> backgrounds;
+	float scale = (float)GetScreenHeight() / (float)GetScreenWidth();
 
 public:
 	ParallaxBackground();

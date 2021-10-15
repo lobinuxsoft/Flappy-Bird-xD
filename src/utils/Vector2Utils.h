@@ -6,6 +6,8 @@
 
 float Clamp(float value, float min, float max);
 
+float Lerp(float start, float end, float amount);
+
 /// <summary>
 /// Angulo que se genera con 2 vetores
 /// </summary>

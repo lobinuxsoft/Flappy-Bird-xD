@@ -14,14 +14,22 @@ void Player::screenLimitsLogic()
 
 void Player::movement()
 {
-	if(IsKeyDown(KEY_UP))
+	if(IsMouseButtonPressed(0))
 	{
-		position.y -= speed * GetFrameTime();
+		acceleration = 0;
+		velocity = -speed / 2.5f;
 	}
-	else if(IsKeyDown(KEY_DOWN))
+	else
 	{
-		position.y += speed * GetFrameTime();
+		acceleration += speed * GetFrameTime();
 	}
+
+	acceleration = (acceleration >= speed) ? speed : acceleration;
+
+	velocity += acceleration * GetFrameTime();
+	position.y += velocity * GetFrameTime();
+
+	rotation = Lerp(0, 90, Clamp(velocity / speed, -1.0f, 1.0f));
 }
 
 Player::Player(Vector2 position, const char jumpSfxUrl[])
@@ -55,7 +63,9 @@ float Player::getRadius()
 
 void Player::setIsAlive(bool isAlive)
 {
+	this->isPlayable = false;
 	this->position = startPosition;
+	this->rotation = 0;
 	this->isAlive = isAlive;
 }
 
@@ -64,11 +74,21 @@ bool Player::getIsAlive()
 	return isAlive;
 }
 
-
 void Player::update()
 {
-	screenLimitsLogic();
-	movement();
+	if (isPlayable)
+	{
+		screenLimitsLogic();
+		movement();
+	}
+	else
+	{
+		if (IsMouseButtonPressed(0))
+		{
+			isPlayable = true;
+			velocity = -speed / 2.5f;
+		}
+	}
 }
 
 void Player::draw()

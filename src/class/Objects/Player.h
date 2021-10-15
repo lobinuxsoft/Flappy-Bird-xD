@@ -8,8 +8,8 @@ using namespace std;
 class Player : public Entity
 {
 private:
-	const float defaultRadius = 30.0;
-	const float speed = 100;
+	const float defaultRadius = 20.0;
+	const float speed = 512;
 
 	vector<Texture2D> sprite;
 	float spriteScale = 0.1f;
@@ -21,8 +21,11 @@ private:
 	float rotation = 0;
 	float radius = defaultRadius;
 	bool isAlive = true;
+	bool isPlayable = false;
 	int frameCounter = 0;
 	int frameSpeed = 8;
+	float acceleration = 0;
+	float velocity = 0;
 
 private:
 	void screenLimitsLogic();

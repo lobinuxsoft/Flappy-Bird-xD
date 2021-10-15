@@ -6,6 +6,13 @@ float Clamp(float value, float min, float max)
     return res > max ? max : res;
 }
 
+float Lerp(float start, float end, float amount)
+{
+    float result = start + amount * (end - start);
+
+    return result;
+}
+
 float Vector2Angle(Vector2 v1, Vector2 v2)
 {
     float result = atan2f(v2.y - v1.y, v2.x - v1.x) * (180.0f / PI);

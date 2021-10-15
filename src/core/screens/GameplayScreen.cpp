@@ -2,7 +2,7 @@
 
 GameplayScreen::GameplayScreen()
 {
-	player = new Player({ GetScreenWidth() * 0.15f, GetScreenHeight() * 0.5f }, playerSpriteUrl.c_str(), jumpSfxUrl.c_str());
+	player = new Player({ GetScreenWidth() * 0.15f, GetScreenHeight() * 0.5f }, jumpSfxUrl.c_str());
 	player->setPivot({ 0.5f,0.5f });
 
 	obstacle = new Obstacle({ (float)GetScreenWidth(), GetScreenHeight() * 0.5f }, obstacleSpriteUrl.c_str(), collisionSfxUrl.c_str());

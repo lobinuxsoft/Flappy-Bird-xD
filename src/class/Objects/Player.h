@@ -1,13 +1,19 @@
 #pragma once
 #include "class/Entity.h"
 
+#include <vector>
+
+using namespace std;
+
 class Player : public Entity
 {
 private:
-	const float defaultRadius = 18.0;
+	const float defaultRadius = 30.0;
 	const float speed = 100;
 
-	Texture2D sprite;
+	vector<Texture2D> sprite;
+	float spriteScale = 0.1f;
+	int spriteIndex = 0;
 	Sound jumpSfx;
 	Rectangle rect{ 0,0,0,0 };
 	Vector2 pivot = { 0, 0 };
@@ -15,13 +21,15 @@ private:
 	float rotation = 0;
 	float radius = defaultRadius;
 	bool isAlive = true;
+	int frameCounter = 0;
+	int frameSpeed = 8;
 
 private:
 	void screenLimitsLogic();
 	void movement();
 
 public:
-	Player(Vector2 position, const char spriteUrl[], const char jumpSfxUrl[]);
+	Player(Vector2 position, const char jumpSfxUrl[]);
 	~Player() override;
 	void setPivot(Vector2 pivot);
 	float getRadius();

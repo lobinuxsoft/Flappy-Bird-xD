@@ -17,6 +17,8 @@ private:
 	TextButton* myLinkedin;
 	string parallaxUrl = "https://mobilegamegraphics.com/product/free-parallax-backgrounds/";
 	TextButton* parallaxLinkButton;
+	string birdSpriteUrl = "https://opengameart.org/content/free-game-asset-grumpy-flappy-bird-sprite-sheets";
+	TextButton* birdSpriteLinkButton;
 	Button* returnButton;
 
 public:

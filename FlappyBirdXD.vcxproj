@@ -66,7 +66,7 @@
       <AdditionalDependencies>raylib.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)resources\" "$(TargetDir)resources\" /E /Y</Command>
+      <Command>$(SolutionDir)utils\PostBuildCommands.bat "$(SolutionDir)" "$(TargetDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -90,10 +90,11 @@
       <EntryPointSymbol>mainCRTStartup</EntryPointSymbol>
     </Link>
     <PostBuildEvent>
-      <Command>xcopy "$(ProjectDir)resources\" "$(TargetDir)resources\" /E /Y</Command>
+      <Command>$(SolutionDir)utils\PostBuildCommands.bat "$(SolutionDir)" "$(TargetDir)"</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="src\class\ParallaxBackground.cpp" />
     <ClCompile Include="src\class\Objects\Obstacle.cpp" />
     <ClCompile Include="src\class\Objects\Player.cpp" />
     <ClCompile Include="src\core\screens\GameplayScreen.cpp" />
@@ -108,6 +109,7 @@
     <ClCompile Include="src\class\UIObjects\TextButton.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="src\class\ParallaxBackground.h" />
     <ClInclude Include="src\class\Objects\Obstacle.h" />
     <ClInclude Include="src\class\Objects\Player.h" />
     <ClInclude Include="src\core\screens\GameplayScreen.h" />

@@ -12,6 +12,7 @@ class MainMenuScreen
 {
 private:
 	string clickSfxUrl = "";
+	float verticalOffset = 60;
 	Button* gameplayButton;
 	Button* creditsButton;
 	Button* quitButton;

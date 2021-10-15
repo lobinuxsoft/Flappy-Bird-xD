@@ -12,7 +12,6 @@ using namespace std;
 class GameplayScreen
 {
 private:
-	string playerSpriteUrl = "";
 	string jumpSfxUrl = "";
 	Player* player;
 

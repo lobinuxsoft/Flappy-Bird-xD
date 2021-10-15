@@ -1,6 +1,6 @@
 #pragma once
 
-const char gameVersion[] = "version 1.0";
+const char gameVersion[] = "version 2.0";
 
 enum class GameState
 {

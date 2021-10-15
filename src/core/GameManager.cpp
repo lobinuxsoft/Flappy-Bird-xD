@@ -9,6 +9,7 @@
 #include "screens/MainMenuScreen.h";
 #include "screens/CreditScreen.h"
 #include "screens/GameplayScreen.h"
+#include "class/ParallaxBackground.h"
 
 #pragma region GLOBAL VARIABLES
 
@@ -28,6 +29,7 @@ static GameState gameState = GameState::MainMenu;
 MainMenuScreen* mainMenuScreen;
 CreditScreen* creditScreen;
 GameplayScreen* gameplayScreen;
+ParallaxBackground* parallax;
 
 #pragma endregion
 
@@ -40,6 +42,7 @@ static void InitGame()
     mainMenuScreen = new MainMenuScreen();
     creditScreen = new CreditScreen();
     gameplayScreen = new GameplayScreen();
+    parallax = new ParallaxBackground();
 
     //HideCursor();
 }
@@ -47,6 +50,8 @@ static void InitGame()
 // Update game (one frame)
 static void UpdateGame()
 {
+    parallax->update();
+
     switch (gameState)
     {
     case GameState::MainMenu:
@@ -70,6 +75,7 @@ static void DrawGame()
 
     ClearBackground(BLACK);
 
+    parallax->draw();
     // Hacer toda la la logica del juego
 
     switch (gameState)
@@ -102,6 +108,8 @@ static void UnloadGame()
 {
     delete mainMenuScreen;
     delete creditScreen;
+    delete gameplayScreen;
+    delete parallax;
 
     CloseAudioDevice();
 }

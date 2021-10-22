@@ -4,8 +4,9 @@ void Obstacle::screenLimitsLogic()
 {
 	if (position.x < -width)
 	{
+		int verticalOffsetInt = static_cast<int>(verticalOffset);
 		position.x = GetScreenWidth() + width;
-		position.y = GetRandomValue(verticalOffset, GetScreenHeight() - verticalOffset);
+		position.y = static_cast<float>(GetRandomValue(verticalOffsetInt, GetScreenHeight() - verticalOffsetInt));
 	}
 }
 
@@ -70,8 +71,8 @@ void Obstacle::draw()
 
 	// Draw collision
 #if _DEBUG
-	DrawRectangle(rectDown.x, rectDown.y, rectDown.width, rectDown.height, Fade(RED, 0.5f));
-	DrawRectangle(rectUp.x, rectUp.y, rectUp.width, rectUp.height, Fade(RED, 0.5f));
-	DrawCircle(position.x, position.y, 10, WHITE);
+	DrawRectangle(static_cast<int>(rectDown.x), static_cast<int>(rectDown.y), static_cast<int>(rectDown.width), static_cast<int>(rectDown.height), Fade(RED, 0.5f));
+	DrawRectangle(static_cast<int>(rectUp.x), static_cast<int>(rectUp.y), static_cast<int>(rectUp.width), static_cast<int>(rectUp.height), Fade(RED, 0.5f));
+	DrawCircle(static_cast<int>(position.x), static_cast<int>(position.y), 10, WHITE);
 #endif // _DEBUG
 }

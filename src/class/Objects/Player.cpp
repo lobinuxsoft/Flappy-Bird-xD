@@ -43,7 +43,7 @@ Player::Player(Vector2 position, const char jumpSfxUrl[])
 
 Player::~Player()
 {
-	for (int i = 0; i < sprite.size(); i++)
+	for (size_t i = 0; i < sprite.size(); i++)
 	{
 		UnloadTexture(sprite[i]);
 	}
@@ -99,7 +99,7 @@ void Player::draw()
 		frameCounter = 0;
 		spriteIndex++;
 
-		if (spriteIndex > sprite.size() - 1) spriteIndex = 0;
+		if (static_cast<size_t>(spriteIndex) > sprite.size() - 1) spriteIndex = 0;
 	}
 
 	rect = Rectangle{
@@ -120,6 +120,6 @@ void Player::draw()
 
 	// Draw collision
 #if _DEBUG
-	DrawCircle(position.x, position.y, radius, Fade(GREEN, 0.5f));
+	DrawCircle(static_cast<int>(position.x), static_cast<int>(position.y), radius, Fade(GREEN, 0.5f));
 #endif // _DEBUG
 }

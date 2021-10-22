@@ -14,7 +14,7 @@ ParallaxBackground::ParallaxBackground()
 
 ParallaxBackground::~ParallaxBackground()
 {
-	for (int i = 0; i < backgrounds.size(); i++)
+	for (size_t i = 0; i < backgrounds.size(); i++)
 	{
 		UnloadTexture(backgrounds[i].image);
 	}
@@ -22,7 +22,7 @@ ParallaxBackground::~ParallaxBackground()
 
 void ParallaxBackground::update()
 {
-	for (int i = 0; i < backgrounds.size(); i++)
+	for (size_t i = 0; i < backgrounds.size(); i++)
 	{
 		backgrounds[i].scrolling -= backgrounds[i].speed;
 		if (backgrounds[i].scrolling <= -(backgrounds[i].image.width * scale)) backgrounds[i].scrolling = 0;
@@ -31,7 +31,7 @@ void ParallaxBackground::update()
 
 void ParallaxBackground::draw()
 {
-	for (int i = 0; i < backgrounds.size(); i++)
+	for (size_t i = 0; i < backgrounds.size(); i++)
 	{
 		DrawTextureEx(backgrounds[i].image, { backgrounds[i].scrolling, 0}, 0.0f, scale, WHITE);
 		DrawTextureEx(backgrounds[i].image, { backgrounds[i].image.width * scale + backgrounds[i].scrolling, 0 }, 0.0f, scale, WHITE);

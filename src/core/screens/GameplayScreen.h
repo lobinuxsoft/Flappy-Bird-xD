@@ -8,21 +8,25 @@
 #include "class/Objects/Obstacle.h"
 
 using namespace std;
+using namespace GameCore;
 
-class GameplayScreen
+namespace FlappyBirdXD
 {
-private:
-	string jumpSfxUrl = "";
-	Player* player;
+	class GameplayScreen
+	{
+	private:
+		string jumpSfxUrl = "";
+		Player* player;
 
-	string obstacleSpriteUrl = "";
-	string collisionSfxUrl = "";
-	Obstacle* obstacle;
+		string obstacleSpriteUrl = "";
+		string collisionSfxUrl = "";
+		Obstacle* obstacle;
 
-public:
-	GameplayScreen();
-	~GameplayScreen();
-	void update(GameState& gameState);
-	void draw();
-};
+	public:
+		GameplayScreen();
+		~GameplayScreen();
+		void update(GameState& gameState);
+		void draw();
+	};
+}
 

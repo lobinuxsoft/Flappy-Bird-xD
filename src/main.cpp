@@ -1,6 +1,8 @@
 #include "core/GameManager.h"
+using namespace FlappyBirdXD;
 
-void main()
+int main()
 {
 	Run();
+	return 0;
 }

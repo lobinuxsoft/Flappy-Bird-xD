@@ -7,20 +7,24 @@
 #include "class/UIObjects/Button.h"
 
 using namespace std;
+using namespace GameCore;
 
-class MainMenuScreen
+namespace FlappyBirdXD
 {
-private:
-	string clickSfxUrl = "";
-	float verticalOffset = 60;
-	Button* gameplayButton;
-	Button* creditsButton;
-	Button* quitButton;
+	class MainMenuScreen
+	{
+	private:
+		string clickSfxUrl = "";
+		float verticalOffset = 60;
+		Button* gameplayButton;
+		Button* creditsButton;
+		Button* quitButton;
 
-public:
-	MainMenuScreen();
-	~MainMenuScreen();
-	void update(GameState& gameState);
-	void draw();
-};
+	public:
+		MainMenuScreen();
+		~MainMenuScreen();
+		void update(GameState& gameState);
+		void draw();
+	};
+}
 
